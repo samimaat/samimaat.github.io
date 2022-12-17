@@ -1,0 +1,276 @@
+:root {
+  --clr-primary: hsl(322, 100%, 66%);
+  --clr-primary-hover: hsl(322, 100%, 50%);
+
+  --clr-neutral-100-cyan: hsl(193, 100%, 96%);
+  --clr-neutral-300-blue: hsl(208, 11%, 55%);
+  --clr-neutral-900-cyan: hsl(192, 100%, 9%);
+
+  --ff-regular: 'Open Sans', sans-serif;
+  --ff-accent: 'Poppins', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+/* img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+} */
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+/* Custom CSS */
+body {
+  --padding: 3rem;
+  --box-shadow-md: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --card-margin: 2rem;
+  --card-padding: 2rem;
+  --card-border-radius: 1rem;
+  
+  font-family: var(--ff-regular);
+
+  margin: auto;
+  font-size: 1rem;
+
+  max-width: 500px;
+  background-color: rgb(236, 236, 236);
+}
+
+h1, h2, h3 {
+  font-family: var(--ff-accent);
+}
+
+.hero {
+  background-image: url(/images/bg-hero-desktop.svg);
+  background-color: var(--clr-neutral-100-cyan);
+  background-clip: padding-box;
+
+  padding: 2rem;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
+.logo {
+  max-width: 30vw;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.banner__signup {
+  background-color: white;
+  font-weight: var(--fw-bold);
+  border: none;
+  box-shadow: var(--box-shadow-md);
+  border-radius: 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem; 
+}
+
+.banner__signup:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.mockup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+  padding: 0.5rem;
+}
+
+.button {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-100-cyan);
+  font-weight: var(--fw-bold);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  width: fit-content;
+  margin: auto;
+  display: block;
+}
+
+.button:hover {
+  background-color: var(--clr-primary-hover);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+  padding: var(--padding);
+  padding-bottom: 10rem;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  background-color: white;
+  box-shadow: var(--box-shadow-md);
+  
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  gap: 1rem;
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: var(--clr-neutral-900-cyan);
+  color: var(--clr-neutral-100-cyan);
+}
+
+.footer__banner {
+  background-color: white;
+  color: var(--clr-neutral-900-cyan);
+  text-align: center;
+  box-shadow: var(--box-shadow-md);
+  border-radius: var(--card-border-radius);
+  margin: 0 var(--card-margin);
+  padding: var(--card-padding);
+  
+  position: relative;
+  top: -7rem;
+}
+
+.footer__banner__heading {
+  padding-bottom: 2rem;
+}
+
+.footer__section {
+  gap: 2rem;
+  margin: 0 2rem 2rem 2rem;
+  margin-top: -4rem;  
+}
+
+.footer__logo {
+  filter: brightness(0) invert(1);
+  height: auto;
+  padding: 2rem 0;
+}
+
+.even-columns {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.even-columns > * {
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.footer__icon-text {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.icon {
+  width: 20px;
+}
+
+.footer__socials, .footer__links {
+  list-style: none;
+  padding:0;
+}
+
+.footer__links {
+  line-height: 2;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+a[href] {
+  color: var(--clr-neutral-100-cyan);
+  text-underline-offset: 0.2rem;
+  transition: 0.2s;
+}
+
+a[href]:hover {
+  color: var(--clr-primary-hover);
+  text-underline-offset: 0.5rem;
+  background-color: var(--clr-neutral-100-cyan);
+  text-decoration-style: wavy;
+}
