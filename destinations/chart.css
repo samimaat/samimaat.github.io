@@ -1,0 +1,37 @@
+:focus {
+  outline: none;
+}
+.bar {
+  fill: grey;
+  height: 21px;
+  transition: fill .3s ease;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+}
+
+.bar > text {
+  fill: black;
+}
+
+.chart:hover,
+.chart:focus {
+  .bar {
+    fill: #aaa;
+  }
+}
+
+.bar:hover,
+.bar:focus {
+  fill: red !important;
+  outline: 1px black solid;
+}
+
+figcaption {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
