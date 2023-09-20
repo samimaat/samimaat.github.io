@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing images</title>
+    <style>
+      :root {
+        --img-width: 40rem;
+      }
+
+      body {
+        background-color: beige;
+      }
+
+      figure {
+        background-color: white;
+        border-radius: 1rem;
+        max-width: var(--img-width);
+        border: solid 1px black;
+      }
+
+      figure figcaption {
+        padding: 0.75rem;
+        margin: 0;
+      }
+
+      img {
+        border-radius: 1rem;
+        /* width: var(--img-width); */
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <figure>
+      <figcaption>
+        Shoes are important for climbing. Make sure they fit and are actually a
+        bit too tight in the beginning.
+      </figcaption>
+      <img src="resource/image.jpg" alt="Bouldering blueprint promo." />
+    </figure>
+    <p>
+      Why is there extra space when <code>figcaption</code> is before
+      <code>img</code>?
+    </p>
+    <figure>
+      <img src="resource/image.jpg" alt="Bouldering blueprint promo." />
+      <figcaption>
+        Shoes are important for climbing. Make sure they fit and are actually a
+        bit too tight in the beginning.
+      </figcaption>
+    </figure>
+  </body>
+</html>
