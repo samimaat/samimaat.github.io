@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expando button test</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        Main link
+        <button id="revealButton" onclick="reveal()">Reveal links</button>
+        <ul id="subMenu" style="display: none">
+          <li>Link 1</li>
+          <li>Link 2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      function reveal() {
+        if (document.getElementById("subMenu").style.display == "none") {
+          document.getElementById("subMenu").style.display = "block";
+        } else {
+          document.getElementById("subMenu").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
